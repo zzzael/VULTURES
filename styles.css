@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'OCRB';
+    src: url('ocrb.otf') format('opentype');
+}
+
+body {
+    background-color: #7e6b61; /* Background color from your image */
+    font-family: 'OCRB', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 900px;
+    background-color: #7e6b61; /* Background color */
+}
+
+.text-section {
+    color: #1e1d19;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+#countdown {
+    font-size: 1.5rem; /* Slightly larger for the countdown */
+    margin-bottom: 20px;
+}
+
+.logo-section img {
+    max-width: 250px; /* Increased the size of the logo */
+    height: auto;
+}
+
+/* Ensure the design doesn't fill the entire screen */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .text-section {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
