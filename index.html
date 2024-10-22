@@ -3,86 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>YZYCRAFT - COUNTDOWN</title>
-
-    <!-- Open Graph / Facebook / Twitter -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="YZYCRAFT - COUNTDOWN">
-    <meta property="og:description" content="YZY 2024">
-    <meta property="og:image" content="ogmetadata.png"> <!-- Path to your image -->
-    <meta property="og:image:width" content="2659">
-    <meta property="og:image:height" content="1591">
-    <meta property="og:url" content="https://zzzael.github.io/VULTURES/"> <!-- Replace with your actual URL -->
-
-    <!-- Footer / Author metadata -->
-    <meta name="author" content="YZYCRAFT - VULTURES">
-    
-    <link rel="stylesheet" href="styles.css">
+    <title>Tracklist</title>
+    <style>
+        @font-face {
+            font-family: 'SF Pro';
+            src: url('/fonts/sfpro.ttf') format('truetype');
+        }
+        body {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0; /* Remove default body margin */
+            display: flex; 
+            justify-content: flex-start; /* Align items to the left */
+            align-items: center; /* Center items vertically */
+            height: 100vh; /* Full height of the viewport */
+            padding-left: 20px; /* Optional padding for better readability */
+        }
+        .tracklist {
+            text-align: left; /* Align text to the left */
+        }
+        .tracklist div {
+            margin-bottom: 10px; /* Space between each track */
+            text-transform: uppercase; /* Make text all caps */
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="text-section">
-            <p id="countdown">DOORS OPEN 00:00:00:000</p> <!-- Countdown will update here -->
-
-            <p>13850<br>
-            S DECACRAFT BLVD<br>
-            LAS VEGAS NV<br>
-            69348</p>
-
-            <p>35.944659<br>
-            -115.215702</p>
-
-            <p>ADMISSION<br>
-            SEE.KANYE.LIVE<br>
-            $0</p>
-
-            <p>TICKET INCLUDES MERCH</p>
-
-            <p>LIVESTREAM<br>
-            DISCORD.GG/GOODASSSUB</p>
-        </div>
-        <div class="logo-section">
-            <img src="vult.png" alt="Vultures Logo">
-        </div>
+    <div class="tracklist">
+        <div>SLIDE</div>
+        <div>PROMOTION</div>
+        <div>EVERYBODY</div>
+        <div>TAKE OFF YOUR DRESS</div>
+        <div>FRIED</div>
+        <div>FIELD TRIP</div>
+        <div>DRUNK</div>
+        <div>TIME MOVING SLOW</div>
+        <div>RIVER</div>
+        <div>SO CALLED FRIENDS</div>
+        <div>CAT N MOUSE</div>
+        <div>PAY PER VIEW</div>
+        <div>DEAD</div>
+        <div>AFTER LYFE</div>
+        <div>MY SOUL</div>
     </div>
-
-
-    <script>
-        // Set the target date to October 25, 2024, 00:45 UTC (which is 01:45 BST on the 26th)
-        const targetDate = new Date(Date.UTC(2024, 9, 25, 0, 45, 0)).getTime();
-    
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeDifference = targetDate - now;
-    
-            if (timeDifference > 0) {
-                // Calculate days, hours, minutes, seconds, and milliseconds
-                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-                const milliseconds = Math.floor((timeDifference % 1000) * (60 / 1000)); // Convert milliseconds to 0-60
-    
-                // Combine days into hours if there are more than 24 hours remaining
-                const totalHours = days * 24 + hours;
-    
-                // Format time with leading zeroes
-                const hh = String(totalHours).padStart(2, '0');
-                const mm = String(minutes).padStart(2, '0');
-                const ss = String(seconds).padStart(2, '0');
-                const ms = String(milliseconds).padStart(2, '0'); // Milliseconds up to 60
-    
-                // Display the result in the countdown element
-                document.getElementById('countdown').textContent = `DOORS OPEN ${hh}:${mm}:${ss}:${ms}`;
-            } else {
-                // If the countdown is finished, display "DOORS OPEN NOW!"
-                document.getElementById('countdown').textContent = "DOORS OPEN NOW!";
-            }
-        }
-    
-        // Update the countdown every 50 milliseconds for smoother updates
-        setInterval(updateCountdown, 50);
-    </script>    
 </body>
 </html>
