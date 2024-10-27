@@ -3,58 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracklist</title>
+    <title>Slide - Snippet</title>
     <style>
+        /* Load SF Pro font */
         @font-face {
-            font-family: 'SF Pro';
+            font-family: 'SFPro';
             src: url('sfpro.ttf') format('truetype');
         }
+
         body {
-            font-family: 'SF Pro', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: flex-start; /* Align content to the far left */
+            align-items: center; /* Center content vertically */
+            height: 100vh;
+            margin: 0;
+            font-family: 'SFPro', sans-serif;
+            padding-left: 20px; /* Optional padding for some space from the edge */
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        video {
+            width: 500px; /* Larger video width */
+            height: 280px; /* Adjusted video height */
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .title, .subtitle {
+            font-weight: 500;
             font-size: 14px;
-            line-height: 1.6;
-            margin: 0; /* Remove default body margin */
-            display: flex; 
-            justify-content: flex-start; /* Align items to the left */
-            align-items: center; /* Center items vertically */
-            height: 100vh; /* Full height of the viewport */
-            padding-left: 20px; /* Optional padding for better readability */
+            color: #000;
+            margin: 0;
+            text-transform: uppercase; /* All caps text */
         }
-        .tracklist {
-            text-align: left; /* Align text to the left */
-        }
-        .tracklist div {
-            margin-bottom: 10px; /* Space between each track */
-            text-transform: uppercase; /* Make text all caps */
+
+        .subtitle {
+            margin-top: 10px; /* Increased space between title and subtitle */
         }
     </style>
 </head>
 <body>
-    <div class="tracklist">
-        <div>EVERYBODY</div>
-        <div>BACK TO ME</div>
-        <div>TIME MOVING SLOW</div>
-        <div>PAID</div>
-        <div>DO IT</div>
-        <div>NEW BODY</div>
-        <div>SLIDE</div>
-        <div>CARNIVAL</div>
-        <div>FIELD TRIP</div>
-        <div>FUK SUMN</div>
-        <div>FRIED</div>
-        <div>UNLOCK</div>
-        <div>DEAD</div>
-        <div>PROMOTION</div>
-        <div>BURN</div>
-        <div>TAKE OFF YOUR DRESS</div>
-        <div>VULTURES</div>
-        <div>PROBLEMATIC</div>
-        <div>KING</div>
-        <div>GUN TO MY HEAD</div>
-        <div>RIVER</div>
-        <div>BEG FORGIVENESS</div>
-        <div>GOOD (DON'T DIE)</div>
-        <div>530 PROD. DIPSTICK</div>
+    <div class="container">
+        <video id="video" src="slide.mp4" controls autoplay muted loop></video>
+        <div class="title">Slide - Snippet</div>
+        <div class="subtitle">Vultures 2 Soon - All Plans Fulfilled</div>
     </div>
 </body>
 </html>
