@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide - Snippet</title>
-    <style>
-        /* Load SF Pro font */
-        @font-face {
-            font-family: 'SFPro';
-            src: url('sfpro.ttf') format('truetype');
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracklist</title>
+  <style>
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('helv.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-        body {
-            background-color: #ffffff;
-            display: flex;
-            justify-content: flex-start; /* Align content to the far left */
-            align-items: center; /* Center content vertically */
-            height: 100vh;
-            margin: 0;
-            font-family: 'SFPro', sans-serif;
-            padding-left: 20px; /* Optional padding for some space from the edge */
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Black background */
+      color: #ff0000; /* White text color */
+      font-family: 'Helvetica', sans-serif; /* Using local Helvetica */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .container {
-            text-align: left;
-        }
+    h1, .tracklist-updates, .tracklist, .next-project {
+      font-family: 'Helvetica', sans-serif;
+      text-rendering: optimizeLegibility; /* Improves font rendering */
+      -webkit-font-smoothing: antialiased; /* Smoothens font edges on webkit browsers */
+      -moz-osx-font-smoothing: grayscale; /* Smoothens fonts on macOS */
+      letter-spacing: 0.5px; /* Slight spacing between letters softens the visual look */
+      line-height: 1.4; /* Adds space to reduce crowded appearance */
+    }
 
-        video {
-            width: 500px; /* Larger video width */
-            height: 280px; /* Adjusted video height */
-            display: block;
-            margin-bottom: 10px;
-        }
+    h1 {
+      font-family: 'Inter', sans-serif; /* Inter font for the Chinese text */
+      font-weight: bold;
+      color: #ff0000; /* Red color for the Chinese text */
+      font-size: 5vw; /* Scales well on different screen sizes */
+      margin: 0;
+      filter: blur(0.3px); /* Minimal blur to soften edges */
+    }
 
-        .title, .subtitle {
-            font-weight: 500;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            text-transform: uppercase; /* All caps text */
-        }
+    .tracklist-updates {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.5vw; /* Scale for responsiveness */
+    }
 
-        .subtitle {
-            margin-top: 10px; /* Increased space between title and subtitle */
-        }
-    </style>
+    .tracklist {
+      margin-top: 10px;
+      font-size: 1.3vw;
+    }
+
+    .next-project {
+      font-size: 1.2vw;
+      margin-top: 50px;
+      color: rgba(255, 255, 255, 0.13); /* Faded white text with 13% opacity */
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.3s ease, filter 0.3s ease;
+      filter: blur(0.3px); /* Slight blur effect to soften text */
+    }
+
+    .next-project:hover {
+      opacity: 0.5;
+      filter: blur(0); /* Sharpen text slightly on hover */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <video id="video" src="slide.mp4" controls autoplay muted loop></video>
-        <div class="title">Slide - Snippet</div>
-        <div class="subtitle">Vultures 2 Soon - All Plans Fulfilled</div>
-    </div>
+  <h1>我告诉过你</h1>
+  <div class="tracklist-updates">
+    FULL TRACKLIST UPDATES <br>
+    <span style="font-size: 1vw;">more soon...</span>
+  </div>
+  <div class="tracklist">
+    1. FRIED <br>
+    2. STARS
+  </div>
+  <a class="next-project" href="#">[ SEE NEXT PROJECT ]</a>
 </body>
 </html>
